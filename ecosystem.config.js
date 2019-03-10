@@ -5,6 +5,6 @@ module.exports = {
         name: 'ninebot',
         script: 'app.js',
         watch: true,
-        env: {},
+        env: process.env,
     }],
 };
