@@ -1,0 +1,25 @@
+{
+  "name": "ninebot",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bell": "^10.0.0",
+    "code": "^5.2.4",
+    "dotenv": "^6.2.0",
+    "good": "^8.1.2",
+    "good-console": "^8.0.0",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^18.1.0",
+    "lab": "^18.0.2",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.18"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "dev": "nodemon --exec \"node -r dotenv/config\" app.js"
+  }
+}
