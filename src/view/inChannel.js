@@ -1,0 +1,1 @@
+module.exports = (data) => (Object.assign({"response_type": "in_channel", "mrkdwn": true}, data));
