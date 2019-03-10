@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@slack/client": "^4.11.0",
     "bell": "^10.0.0",
     "code": "^5.2.4",
     "dotenv": "^6.2.0",

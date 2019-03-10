@@ -8,11 +8,13 @@ const server = exports.server = global.server = Hapi.server({
 
 const logger = require("./src/config/log");
 const mongo = require("./src/config/mongo");
+const auth = require('./src/config/auth');
 const router = require("./src/router");
 
 (async () => {
     await server.register(logger);
     await server.register(mongo);
+    await server.register(auth);
     await server.register(router);
     await server.start();
 
