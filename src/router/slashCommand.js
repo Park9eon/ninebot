@@ -29,11 +29,12 @@ module.exports = {
              */
             handler: async (req, h) => {
                 try {
-                    const ERROR_MESSAGE = "등록방법 ```/count key=[일정이름]&value=[날짜]&template=[문자열포맷]&diff=[기준]\nEX) /count key=일정&value=2019-12-25&template=크리스마스 까지 %d일 남았습니다.&diff=days```";
-                    if (!req.payload.key || req.payload.key === "") {
+                    const ERROR_MESSAGE = "등록방법 ```/count text=[일정이름]&value=[날짜]&template=[문자열포맷]&diff=[기준]\nEX) /count text=일정&value=2019-12-25&template=크리스마스 까지 %d일 남았습니다.&diff=days```";
+                    const key = req.payload.text;
+                    const {value, template, diff} = req.payload;
+                    if (!key || key === "") {
                         return h.response(error("일정이름을 입력해주세요."));
                     }
-                    const {key, value, template, diff} = req.payload;
                     let count = null;
                     if (value) {
                         count = await Count.createOrUpdate(req.payload.user_id, key, moment(value).toDate(), {
