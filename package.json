@@ -14,7 +14,7 @@
     "hapi": "^18.1.0",
     "lab": "^18.0.2",
     "lodash": "^4.17.13",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "mongoose": "^5.7.5"
   },
   "devDependencies": {
